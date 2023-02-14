@@ -1,6 +1,6 @@
  PROJECT NAME :- ROCK - PAPER - SCISSORS
 
-ROCK PAPER SCISSORS is a hand game, usually played between two people, in which each player simultaneously forms one of the three shapes with an outstreched format...
+ROCK PAPER SCISSORS is a hand game, usually played between two people, in which each player simultaneously forms one of the three shapes with an outstretched format...
 
 DEPLOYED LINK :- https://rps-janani1727.vercel.app/
 
