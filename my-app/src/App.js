@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-// import {GiPartyPopper} from 'react-icons/gi'
+
 
 const App = () => {
   const [userChoice, setUserChoice] = useState('rock')
@@ -8,8 +8,9 @@ const App = () => {
   const [userPoints, setUserPoints] = useState(0)
   const [computerPoints, setComputerPoints] = useState(0)
   const [turnResult, setTurnResult] = useState(null)
-  const [result, setResult] = useState('Let\'s see who wins')
+  const [result, setResult] = useState('Let ’s see who wins')
   const [gameOver, setGameOver] = useState(false)
+
   const choices = ['rock', 'paper', 'scissors']
 
   const handleClick = (value) => {
@@ -28,13 +29,18 @@ const App = () => {
 
   useEffect(() => {
     const comboMoves = userChoice + computerChoice
+
+
     if (userPoints <= 4 && computerPoints <= 4) {
+
+      // by user
+
       if (comboMoves === 'scissorspaper' || comboMoves === 'rockscissors' || comboMoves === 'paperrock') {
         // userPoints.current += 1
         const updatedUserPoints = userPoints + 1
         setUserPoints(updatedUserPoints)
         setTurnResult('User!' )
-        //   setTurnResult('User!' ,<GiPartyPopper color='white' />)
+     
         if (updatedUserPoints === 5){
           setResult('Won by User')
           const gameOff = true
@@ -42,12 +48,14 @@ const App = () => {
         }
       }
 
+      // by computer
+
       if (comboMoves === 'paperscissors' || comboMoves === 'scissorsrock' || comboMoves === 'rockpaper') {
         // computerPoints.current += 1
         const updatedComputerPoints = computerPoints + 1
         setComputerPoints(updatedComputerPoints)
         setTurnResult('Computer!')
-        // setTurnResult('computer!' ,<GiPartyPopper color='white' />)
+        
         if (updatedComputerPoints === 5) {
           setResult('Won by Computer')
           const gameOff = true
